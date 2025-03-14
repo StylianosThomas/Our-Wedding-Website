@@ -98,15 +98,14 @@ function updatePageLanguage() {
     // INFORMATION SECTION
     updateText("#information h1", "Information", "Πληροφορίες");
     updateText("#information h3:nth-child(1)", "We’re Getting Married And You’re Invited!", "Παντρευομαστε και ειστε καλεσμενοι!");
-    updateHTML(
-        "#information p",
+    updateHTML("#information p",
         "We’re so excited to share this special time in our lives with you! With our families and friends spread across the globe, we wanted to create an opportunity for everyone to celebrate with us. Therefore, we’ve chosen to hold our wedding ceremony in London and our wedding party a week later in Athens.<br>Below, you’ll find details about the locations, dates, and times for both events. Please let us know if you’ll be joining us for either—or both—by filling out the RSVP form at the bottom of the page.",
         "Είμαστε τόσο ενθουσιασμένοι που θα μοιραστούμε αυτήν την ξεχωριστή στιγμή της ζωής μας μαζί σας! Με τις οικογένειες και τους φίλους μας σκορπισμένους σε όλο τον κόσμο, θέλαμε να δώσουμε σε όλους την ευκαιρία να γιορτάσουμε μαζί. Γι’ αυτό και αποφασίσαμε να πραγματοποιήσουμε την τελετή του γάμου μας στο Λονδίνο και, μία εβδομάδα αργότερα, το γαμήλιο πάρτι μας στην Αθήνα.<br>Παρακάτω θα βρείτε όλες τις πληροφορίες σχετικά με τις τοποθεσίες, τις ημερομηνίες και τις ώρες και των δύο εκδηλώσεων. Σας παρακαλούμε να μας ενημερώσετε εαν θα παρευρεθείτε σε κάποια ή και στις δύο εκδηλώσεις, συμπληρώνοντας τη φόρμα στο τέλος της σελίδας."
     );
     updateText("#finalHeader", "We can’t wait to celebrate with you!", "Ανυπομονουμε να γιορτασουμε μαζι σας!");
 
     // EVENTS SECTION
-      updateText("#events h1", "Events", "Εκδηλώσεις");
+    updateText("#events h1", "Events", "Εκδηλώσεις");
     updateHTML("#infoCeremony",
         `<h3>Ceremony</h3>
         <p>
@@ -133,6 +132,7 @@ function updatePageLanguage() {
             <br>Ηνωμένο Βασίλειο
         </p>`
     )
+
     updateHTML("#infoParty",
         `<h3>Party</h3>
         <p>
@@ -158,12 +158,12 @@ function updatePageLanguage() {
             <br>Γλυφάδα 166 75,
             <br>Ελλάδα
         </p>`
-)
+    )
 
     // RSVP SECTION
     updateText("#rsvp h1", "RSVP", "Θα έρθετε?");
-    updateHTML(
-        "#rsvp p",
+    // updateHTML("#rsvp p",
+    updateHTML("#rsvp-info",
         "Please use this form to confirm your attendance to one or both events by selecting <strong>'Yes'</strong> or <strong>'no'</strong> for each. If you plan to attend, kindly specify the total number of attendees, including yourself. We would greatly appreciate it if you could RSVP by <strong>31st of May '25</strong>.",
         "Παρακαλούμε ενημερώστε μας για την παρουσία σας στις εκδηλώσεις μας, επιλέγοντας <strong>'Ναι'</strong> ή <strong>'Οχι'</strong> μαζί με τον συνολικό αριθμό ατόμων στην κάθε μία. Τέλος, θα το εκτιμούσαμε πολύ αν μας απαντούσατε πριν τις <strong>31 Μαΐου '25</strong>"
     );
@@ -230,9 +230,14 @@ function updatePageLanguage() {
     const submitButton = document.querySelector("#submitRsvp");
     if (submitButton) {submitButton.textContent = isEnglish ? "Yes, I'll be there!" : "Ναι, θα ερθω!";}
 
+    // Confirmation Pop Up
+    updateText("#conf-msg h3", "Thank you!", "Ευχαριστουμε!");
+    updateHTML("#conf-msg p",
+        "Your submission has been received successfully. We’re excited to see you there!<br>If anything changes, feel free to submit the form again to update your RSVP",
+        "Λάβαμε τα στοιχεία σας με επιτυχία. Ανυπομονούμε να σας δούμε εκεί!<br>Αν αλλάξει κάτι, μπορείτε να συμπληρώσετε ξανά τη φόρμα για να μας ενημερώσετε.")
+
     // Footer
-    updateHTML(
-        "footer p",
+    updateHTML("footer p",
         `Crafted by Stelios with lots of <span class="fa fa-heart pulse2"></span> for Spyri!`,
         `Aπό τον Στέλιο με πολλή <span class="fa fa-heart pulse2"></span> για τη Σπυριδούλα!`
     );

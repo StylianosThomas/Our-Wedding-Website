@@ -204,13 +204,32 @@
 </section>
 
 <section class="rsvp text-center" id="rsvp">
+
+    <!-- Pop up Confirmation message  -->
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding" id="conf-msg">
+                        <h3>Thank you!</h3>
+                        <p>Your submission has been received successfully. We’re excited to see you there!
+                        <br>If anything changes, feel free to submit the form again to update your RSVP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form  -->
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center fh5co-heading animate-box">
                 <h1 class="noto-serif-header">RSVP</h1>
             </div>
             <div class="col-md-10 col-md-offset-1 animate-box">
-                <p class="noto-serif-body">Please use this form to confirm your attendance to one or both events by selecting <strong>'Yes'</strong> or <strong>'no'</strong> for each.
+                <p class="noto-serif-body" id="rsvp-info">Please use this form to confirm your attendance to one or both events by selecting <strong>'Yes'</strong> or <strong>'no'</strong> for each.
                     If you plan to attend, kindly specify the total number of attendees, including yourself. We would greatly appreciate it if you could RSVP by <strong>31st of May '25</strong>.</p>
 
                 <form id="rsvp-form" class="rsvp-form" action="https://script.google.com/macros/s/AKfycbxHeUEJ-c1f7ulP21_gG9Wu4M9ChQfEyX5O2-kVWgKKCvxjCqtW4VEziCijfLV7hov98w/exec" method="POST">

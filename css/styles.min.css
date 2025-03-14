@@ -815,7 +815,6 @@ body.modal-open{
   padding:25px
 }
 
-
 .language-toggle {
   width: 80px;
   height: 40px;
@@ -831,7 +830,6 @@ body.modal-open{
 .language-toggle.active {
   background: linear-gradient(to right, #b14141 50%, #ffffff 50%); /* English flag colors */
 }
-
 
 /* Sphere inside the toggle */
 .toggle-sphere {
@@ -865,3 +863,22 @@ body.modal-open{
     font-weight: bold;
 }
 
+#rsvp-modal .modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0 auto; /* Remove default margin */
+}
+
+.modal {
+  overflow-y: auto;
+}
+
+body.modal-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  position: fixed !important;
+  touch-action: none !important;
+}
